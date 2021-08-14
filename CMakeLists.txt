@@ -37,5 +37,5 @@ add_library(libedit STATIC
 target_include_directories(libedit PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/gen"
                                            "${CMAKE_CURRENT_SOURCE_DIR}/gen/src"
                                            "${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_link_libraries(libedit PUBLIC panel ncurses)
+target_link_libraries(libedit PUBLIC ncurses)
 
