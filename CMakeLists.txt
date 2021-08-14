@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(libedit)
 
-add_library(libedit STATIC
+add_library(edit STATIC
             src/chared.c
             src/el.c
             src/filecomplete.c
@@ -34,8 +34,8 @@ add_library(libedit STATIC
             src/tty.c
             src/vis.c)
 
-target_include_directories(libedit PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/gen"
-                                           "${CMAKE_CURRENT_SOURCE_DIR}/gen/src")
-target_include_directories(libedit PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_link_libraries(libedit PUBLIC ncurses)
+target_include_directories(edit PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/gen"
+                                        "${CMAKE_CURRENT_SOURCE_DIR}/gen/src")
+target_include_directories(edit PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_link_libraries(edit PUBLIC ncurses)
 
