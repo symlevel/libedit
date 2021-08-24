@@ -38,7 +38,9 @@
 #define HAVE_ISASCII 1
 
 /* Define to 1 if you have the `issetugid' function. */
-/* #undef HAVE_ISSETUGID */
+#ifdef __APPLE__
+#define HAVE_ISSETUGID 1
+#endif
 
 /* Define to 1 if you have the `curses' library (-lcurses). */
 /* #undef HAVE_LIBCURSES */
@@ -56,13 +58,17 @@
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <malloc.h> header file. */
+#ifdef __linux__
 #define HAVE_MALLOC_H 1
+#endif
 
 /* Define to 1 if you have the `memchr' function. */
 #define HAVE_MEMCHR 1
 
 /* Define to 1 if you have the <memory.h> header file. */
+#ifdef __linux__
 #define HAVE_MEMORY_H 1
+#endif
 
 /* Define to 1 if you have the `memset' function. */
 #define HAVE_MEMSET 1
@@ -77,7 +83,9 @@
 #define HAVE_REGCOMP 1
 
 /* Define to 1 if you have the `re_comp' function. */
+#ifdef __linux__
 #define HAVE_RE_COMP 1
+#endif
 
 /* Define to 1 if you have the `secure_getenv' function. */
 //#define HAVE_SECURE_GETENV 1
@@ -114,10 +122,14 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcat' function. */
-/* #undef HAVE_STRLCAT */
+#ifdef __APPLE__
+#define HAVE_STRLCAT 1
+#endif
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#ifdef __APPLE__
+#define HAVE_STRLCPY 1
+#endif
 
 /* Define to 1 if you have the `strrchr' function. */
 #define HAVE_STRRCHR 1
@@ -129,13 +141,19 @@
 #define HAVE_STRTOL 1
 
 /* Define to 1 if struct dirent has member d_namlen */
-/* #undef HAVE_STRUCT_DIRENT_D_NAMLEN */
+#ifdef __APPLE__
+#define HAVE_STRUCT_DIRENT_D_NAMLEN 1
+#endif
 
 /* Define to 1 if you have the `strunvis' function. */
-/* #undef HAVE_STRUNVIS */
+#ifdef __APPLE__
+#define HAVE_STRUNVIS 1
+#endif
 
 /* Define to 1 if you have the `strvis' function. */
-/* #undef HAVE_STRVIS */
+#ifdef __APPLE__
+#define HAVE_STRVIS 1
+#endif
 
 /* Define to 1 if you have the <sys/cdefs.h> header file. */
 #define HAVE_SYS_CDEFS_H 1
@@ -182,7 +200,14 @@
 /* #undef HAVE_VFORK_H */
 
 /* Define to 1 if you have the `vis' function. */
-/* #undef HAVE_VIS */
+#ifdef __APPLE__
+#define HAVE_VIS 1
+#endif
+
+/* Define to 1 if you have the <wchar.h> header file. */
+#ifdef __APPLE__
+#define HAVE_WCHAR_H 1
+#endif
 
 /* Define to 1 if you have the `wcsdup' function. */
 #define HAVE_WCSDUP 1
